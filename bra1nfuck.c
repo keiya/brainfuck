@@ -91,13 +91,8 @@ interpret(int startidx)
         case '.':
             idx++;
             if (check()) break;
-            if (31 < (*ptr) && (*ptr) < 127) {
-                putchar(*ptr);
-            }
-            else {
-                printf("?");
-            }
-                fflush(stdout);
+            putchar(*ptr);
+            fflush(stdout);
             break;
         case ',':
             idx++;
