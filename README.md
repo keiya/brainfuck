@@ -1,20 +1,23 @@
 # Make
-cc -o bf bra1nfuck.c
+`cc -o bf bra1nfuck.c`
 
 # F**king
 ## Hello, world
-./bf helloworld.bf
+`./bf helloworld.bf`
 
 ## show hoge
-./bf hoge.bf
-./bf hogeloop.bf
+`./bf hoge.bf`
+`./bf hogeloop.bf`
 
 ## multiply
-./bf multiply.bf
+`./bf multiply.bf`
 
 ## echo keyboard
-./bf echo.bf
+`./bf echo.bf`
 
 ## upper case to lower case
-./bf conditional.bf
+`./bf conditional.bf`
 
+
+Sample brainfuck code:
+http://www.kmonos.net/alang/etc/brainfuck.php
