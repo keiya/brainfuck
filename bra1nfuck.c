@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void skip();
-
 char *prog;
 int ary[30000];
 int *ptr = ary;
@@ -108,18 +106,12 @@ interpret(int startidx)
             break;
         case '[':
             if (*ptr == 0) {
-            push(idx,1);
-            idx++;
-                //skip(idx);
+                push(idx,1);
+                idx++;
             }
             else {
-            push(idx,0);
-            idx++;
-                break;
-                int loopidx = idx;
-                while(interpret(loopidx)) {
-                
-                }
+                push(idx,0);
+                idx++;
             }
             break;
         case ']':
@@ -130,7 +122,6 @@ interpret(int startidx)
                 pop();
                 idx++;
             }
-            //idx = startidx;
             break;
         case EOF:
             return 0;
@@ -183,37 +174,5 @@ main(int argc, char *argv[])
     idx = 0;
     while(interpret(0)) {
     
-    }
-
-}
-
-
-
-void
-skip(int startidx)
-{
-    
-    unsigned int ch;
-    while(ch = getchar()) {
-        switch (ch) {
-            case '[':
-                if (*ptr == 0) {
-                    printf("skip\n");
-                    skip(idx);
-                }
-                else {
-                    printf("into\n");
-                    while(interpret(idx)) {
-                    
-                    }
-                }
-                break;
-            case ']':
-                return;
-                break;
-            default:
-                break;
-                //exit(0);
-        }
     }
 }
